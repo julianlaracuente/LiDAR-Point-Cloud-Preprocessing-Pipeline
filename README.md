@@ -46,23 +46,5 @@ The pipeline is organized as a chain of ROS nodes communicating over dedicated t
 /lidar/points/ground        /lidar/point/obstacles
  (ground-plane points)         (obstacle points)
 ```
-
-## Vizualization
-
-- Gazebo Simulation :
-<img width="1162" height="1744" alt="image" src="https://github.com/user-attachments/assets/c4dec28e-9efc-40d1-9124-3f2a6188fc62" />
-
-- lidar/points/points topic. (RAW Lidar Points)
-<img width="1090" height="1084" alt="image" src="https://github.com/user-attachments/assets/0f2e45af-0ce5-4534-ba27-3d84c8b72e53" />
-
-- lidar/points/filtered
-  <img width="1080" height="1176" alt="image" src="https://github.com/user-attachments/assets/a0020642-41d7-41a9-baed-00bd312bbfbe" />
-
-- lidar/points/ground
-  <img width="1088" height="1196" alt="image" src="https://github.com/user-attachments/assets/5532e19d-7e25-4caa-b04a-7e8d01e8755d" />
-
-- lidar/points/obstacles
-  <img width="1072" height="858" alt="image" src="https://github.com/user-attachments/assets/c259da15-4507-4e2b-bc9d-3f2a78c14002" />
-
 ## Contributors
 - Main collaborators were Victor Santos, Brian Rivera, and myself.
