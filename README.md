@@ -20,8 +20,8 @@ The pipeline is organized as a chain of ROS nodes communicating over dedicated t
  
 ```
 ┌───────────────────────┐
-│   Gazebo LiDAR Sensor  │
-└───────────┬────────────┘
+│   Gazebo LiDAR Sensor │
+└───────────┬───────────┘
             │ publishes raw, unfiltered cloud
             ▼
    /lidar/points/points
@@ -29,9 +29,9 @@ The pipeline is organized as a chain of ROS nodes communicating over dedicated t
             │ subscribed by preprocessing node
             ▼
 ┌────────────────────────────────────────────┐
-│         Preprocessing Node                  │
-│  (NaN/Inf removal → Voxel downsample → ROI) │
-└───────────┬──────────────────────────────────┘
+│         Preprocessing Node                 │
+│  (NaN/Inf removal → Voxel downsample → ROI)│
+└───────────┬────────────────────────────────┘
             │ publishes cleaned, filtered cloud
             ▼
    /lidar/point/filters
@@ -39,12 +39,16 @@ The pipeline is organized as a chain of ROS nodes communicating over dedicated t
             │ subscribed by RANSAC segmentation node
             ▼
 ┌────────────────────────────────────────────┐
-│        RANSAC Plane Segmentation Node       │
-└───────┬───────────────────────────┬──────────┘
+│        RANSAC Plane Segmentation Node      │
+└───────┬───────────────────────────┬────────┘
         │ publishes                 │ publishes
         ▼                           ▼
 /lidar/points/ground        /lidar/point/obstacles
  (ground-plane points)         (obstacle points)
 ```
+
+## Images
+- For images, please look the Images folder.
+
 ## Contributors
 - Main collaborators were Victor Santos, Brian Rivera, and myself.
